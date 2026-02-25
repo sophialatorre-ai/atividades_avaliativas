@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1 - Operações Matemáticas</title>
+</head>
+
+<body>
+    <h1>Operações Matemáticas</h1>
+    <button onclick="calcular()">Clique Aqui pra Calcular</button>
+    <div id="resultados"></div>
+
+    <script>
+        function calcular() {
+            let num1 = parseFloat(prompt("Digite o primeiro número"));
+            let num2 = parseFloat(prompt("Digite o segundo número"));
+
+            let soma = num1 + num2;
+            let subtracao = num1 - num2;
+            let multiplicacao = num1 * num2;
+            let divisao = num1 / num2;
+            let porcentagem = soma * 0.252;
+            let media = (num1 + num2) / 2;
+            let quadrado = soma * soma;
+            // math é o objeto doJS que comt´m funções matemáticas
+            // SQRT é abreviação de Square Root(Raiz Quadrada)
+            let raizQuadrada = Math.sqrt(soma);
+            // O conteúdo interno em HTML desse elemento (id)
+            document.getElementById("resultados").innerHTML = `
+            <p>Soma: ${soma}</p>
+            <p>Subtração: ${subtracao}</p>
+            <p>Multiplicação: ${multiplicacao}</p>
+            <p>Divisão: ${divisao}</p>
+            <p>25,2% da soma : ${porcentagem}</p>
+            <p>Média : ${media}</p>
+            <p>Quadrado da Soma: ${quadrado}</p>
+            <p>Raiz Quadrada da Soma: ${raizQuadrada}</p>
+            `;
+        }
+    </script>
+</body>
+
+</html>
